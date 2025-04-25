@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eaximo provides expert IT solutions, app development, software development, technical support, and cybersecurity services to optimize business operations.">
+    <title>IT Support, App & Software Development Services | Eaximo</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --tech-blue: #1a56db;
+            --tech-accent: #93c5fd;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        .tech-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .service-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--tech-blue);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(26, 86, 219, 0.15);
+        }
+        
+        .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--tech-blue);
+        }
+        
+        .feature-badge {
+            background-color: rgba(26, 86, 219, 0.1);
+            color: var(--tech-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--tech-blue);
+            border-radius: 2px;
+        }
+        
+        .tech-cta {
+            background: linear-gradient(135deg, var(--tech-blue) 0%, var(--secondary) 100%);
+            color: white;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-icon {
+            background: rgba(26, 86, 219, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--tech-blue);
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--tech-blue);
+        }
+        
+        .nav-pills .nav-link {
+            color: var(--dark);
+        }
+        
+        @media (max-width: 768px) {
+            .tech-hero {
+                min-height: auto;
+                padding: 5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">Eaximo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="it-tech-support.html">IT & Tech Support</a></li>
+                            <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#">AI Solutions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="#contact">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="tech-hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">Reliable IT & Tech Support for Your Business Growth</h1>
+                    <p class="lead mb-4">In today's digital-first world, <strong>efficient IT solutions</strong> are crucial for <strong>seamless business operations, security, and productivity</strong>. Eaximo offers <strong>end-to-end IT support, app development, software solutions, and technical consulting</strong> to help businesses <strong>scale with confidence</strong>.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn btn-primary btn-lg px-4">Get IT Support</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg px-4">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-5 my-5" id="services">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10 text-center">
+                    <span class="feature-badge">IT & Tech Solutions</span>
+                    <h2 class="section-title">Our IT & Tech Support Services</h2>
+                    <p class="lead">Comprehensive technology solutions tailored to your business requirements</p>
+                </div>
+            </div>
+            
+            <ul class="nav nav-pills mb-5 justify-content-center" id="services-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="app-dev-tab" data-bs-toggle="pill" data-bs-target="#app-dev" type="button">App Development</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="software-dev-tab" data-bs-toggle="pill" data-bs-target="#software-dev" type="button">Software Solutions</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tech-support-tab" data-bs-toggle="pill" data-bs-target="#tech-support" type="button">Tech Support</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pro-tools-tab" data-bs-toggle="pill" data-bs-target="#pro-tools" type="button">Pro Tools</button>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="services-tabContent">
+                <!-- App Development Tab -->
+                <div class="tab-pane fade show active" id="app-dev" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fab fa-android"></i>
+                                    </div>
+                                    <h3 class="h4">Android App Development</h3>
+                                    <p class="text-muted">Native and hybrid solutions for Android devices with optimized performance and security.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Kotlin/Java development</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Material Design UI</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>Play Store optimization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fab fa-apple"></i>
+                                    </div>
+                                    <h3 class="h4">iOS App Development</h3>
+                                    <p class="text-muted">Custom applications for Apple devices with Swift and Objective-C expertise.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>SwiftUI/UIKit</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>App Store compliance</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>Apple ecosystem integration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <h3 class="h4">Cross-Platform Development</h3>
+                                    <p class="text-muted">Unified mobile experiences with Flutter and React Native frameworks.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Single codebase</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Cost-effective</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>Native-like performance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                        <a href="#contact" class="btn btn-primary btn-lg px-5">Develop a Powerful Mobile App Today!</a>
+                    </div>
+                </div>
+                
+                <!-- Software Development Tab -->
+                <div class="tab-pane fade" id="software-dev" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                    <h3 class="h4">Custom Software</h3>
+                                    <p class="text-muted">Tailor-made business solutions designed for your specific operational needs.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Requirement analysis</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Modular architecture</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>Scalable solutions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                    <h3 class="h4">SaaS Development</h3>
+                                    <p class="text-muted">Cloud-based applications for modern businesses with subscription models.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Multi-tenancy</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Subscription billing</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>API integrations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <h3 class="h4">Workflow Automation</h3>
+                                    <p class="text-muted">Efficiency-driven digital solutions to streamline your business processes.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Process mapping</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>RPA solutions</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>Integration APIs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                        <a href="#contact" class="btn btn-primary btn-lg px-5">Build Custom Software That Powers Your Business!</a>
+                    </div>
+                </div>
+                
+                <!-- Tech Support Tab -->
+                <div class="tab-pane fade" id="tech-support" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fas fa-headset"></i>
+                                    </div>
+                                    <h3 class="h4">IT Helpdesk Support</h3>
+                                    <p class="text-muted">Fast resolution services via email, chat, and ticket-based systems.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>24/7 availability</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Remote assistance</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>Knowledge base</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h3 class="h4">Cybersecurity</h3>
+                                    <p class="text-muted">Protection against cyber threats with comprehensive security measures.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>SSL certificates</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Firewall setup</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>Malware scanning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fas fa-server"></i>
+                                    </div>
+                                    <h3 class="h4">Hosting & Server Support</h3>
+                                    <p class="text-muted">Reliable uptime and seamless maintenance for your digital infrastructure.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Server monitoring</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Performance tuning</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>Disaster recovery</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                        <a href="#contact" class="btn btn-primary btn-lg px-5">Ensure Seamless Tech Support & Security!</a>
+                    </div>
+                </div>
+                
+                <!-- Pro Tools Tab -->
+                <div class="tab-pane fade" id="pro-tools" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <h3 class="h4">Version Control</h3>
+                                    <p class="text-muted">Efficient project management with Git/GitHub setup and best practices.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Repository setup</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Branch strategies</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>Code reviews</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fas fa-code-branch"></i>
+                                    </div>
+                                    <h3 class="h4">DevOps Support</h3>
+                                    <p class="text-muted">CI/CD pipeline setup for automated testing and deployment workflows.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Docker/Kubernetes</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>Jenkins/GitHub Actions</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>Infrastructure as Code</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-card card h-100">
+                                <div class="card-body p-4">
+                                    <div class="tech-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <h3 class="h4">Technical Documentation</h3>
+                                    <p class="text-muted">Professional documentation for your apps and software solutions.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>API documentation</li>
+                                        <li class="mb-1"><i class="fas fa-check-circle text-primary me-2"></i>User manuals</li>
+                                        <li><i class="fas fa-check-circle text-primary me-2"></i>Technical specifications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                        <a href="#contact" class="btn btn-primary btn-lg px-5">Optimize Your IT Workflow Today!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Why Choose Eaximo for IT & Tech Support?</h2>
+                    <p class="lead">We deliver measurable results through innovative technology solutions</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5">Scalable Solutions</h3>
+                            <p class="mb-0">Tailored tech that grows with your business needs and user demands.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5">Expert Consultation</h3>
+                            <p class="mb-0">Professional guidance for infrastructure optimization and tech strategy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5">Security Focus</h3>
+                            <p class="mb-0">Data protection and cybersecurity built into every solution we provide.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5">Dedicated Support</h3>
+                            <p class="mb-0">Reliable tech assistance, maintenance, and continuous updates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="tech-cta py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Ready to Strengthen Your Business with Advanced IT Solutions?</h2>
+                    <p class="lead mb-5">Contact Eaximo today for a free consultation and let's discuss how we can optimize your technology infrastructure.</p>
+                    <a href="#contact" class="btn btn-light btn-lg px-5">Get Started Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5" id="contact">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="lead">Let's discuss your IT needs and how we can help</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <h3 class="h4 mb-4">Contact Information</h3>
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-map-marker-alt fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h6 mb-1">Our Office</h4>
+                                    <p class="mb-0">123 Tech Plaza, Suite 700<br>San Francisco, CA 94107</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h6 mb-1">Email Us</h4>
+                                    <p class="mb-0">itsupport@eaximo.com<br>sales@eaximo.com</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-phone-alt fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h6 mb-1">Call Us</h4>
+                                    <p class="mb-0">+1 (415) 555-7890<br>Mon-Fri, 8am-6pm PST</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-5">
+                            <h3 class="h4 mb-4">Send Us a Message</h3>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <select class="form-select">
+                                            <option selected>Select Service</option>
+                                            <option>App Development</option>
+                                            <option>Software Solutions</option>
+                                            <option>Technical Support</option>
+                                            <option>Other IT Services</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h5 text-white mb-4">Eaximo</h3>
+                    <p>Your trusted partner for IT solutions, app development, and technical support services.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white-50">Services</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white-50">About</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">IT Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">App Development</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Software Solutions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Technical Support</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="h5 text-white mb-4">Newsletter</h3>
+                    <p class="text-white-50 mb-4">Subscribe for tech insights and company updates.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">© 2023 Eaximo. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-white-50 mb-0">Designed with <i class="fas fa-heart text-danger"></i> by Eaximo Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-sm');
+            }
+        });
+
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    </script>
+</body>
+</html>
