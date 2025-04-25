@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boost brand visibility and drive conversions with Eaximo's expert digital marketing solutions. Get tailored SEO, PPC, social media, and lead generation strategies.">
+    <title>Digital Marketing, SEO & Lead Generation Services | Eaximo</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reusing existing styles from main page */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --dark: #1f2937;
+            --light: #f9fafb;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .hero-title {
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .service-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.75rem;
+        }
+        
+        .feature-list li:before {
+            content: '•';
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .marketing-category {
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .marketing-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefits-section {
+            background-color: var(--light);
+            padding: 5rem 0;
+            border-radius: 12px;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 5rem 0;
+            border-radius: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: auto;
+                padding: 5rem 0;
+            }
+            
+            .hero-title {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Eaximo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-primary active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#why-us">Why Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="#contact">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title display-4 fw-bold">Fuel Your Business Growth</h1>
+                    <p class="lead mb-4">We craft <strong>performance-driven digital marketing strategies</strong> that increase brand awareness, improve search rankings, and maximize lead conversions.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#services" class="btn btn-primary btn-lg">Explore Services</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Get Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-5 my-5" id="services">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Our Digital Marketing Services</h2>
+                    <p class="lead">Comprehensive solutions to <strong>grow your online presence</strong> and drive business results</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3 class="h4">SEO Services</h3>
+                            <p>Improve search rankings and drive organic traffic with our proven strategies.</p>
+                            <a href="#seo" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-ad"></i>
+                            </div>
+                            <h3 class="h4">Paid Advertising</h3>
+                            <p>Targeted PPC campaigns that deliver measurable results.</p>
+                            <a href="#ppc" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="h4">Social Media Marketing</h3>
+                            <p>Grow your audience and engagement across platforms.</p>
+                            <a href="#social" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Services -->
+    <section class="py-5 bg-light" id="seo">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Search Engine Optimization (SEO)</h2>
+                    <p class="lead">Improve your <strong>search visibility</strong> and attract quality traffic</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="marketing-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-file-alt fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">On-Page & Off-Page SEO</h3>
+                                <p class="mb-0">Content structuring, backlinking, and keyword strategy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="marketing-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-cog fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">Technical SEO</h3>
+                                <p class="mb-0">Faster website load time & indexing improvements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="marketing-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-map-marker-alt fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">Local SEO</h3>
+                                <p class="mb-0">Google My Business optimization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="marketing-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-shopping-cart fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">E-commerce SEO</h3>
+                                <p class="mb-0">Product listing optimization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="marketing-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-play fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">YouTube SEO</h3>
+                                <p class="mb-0">Video optimization strategies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="marketing-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-chart-bar fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">SEO Audits</h3>
+                                <p class="mb-0">Data-driven growth insights</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#contact" class="btn btn-primary btn-lg px-5">Rank Higher on Google & Drive More Traffic!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Marketing -->
+    <section class="py-5 my-5" id="social">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Social Media & Influencer Marketing</h2>
+                    <p class="lead">Grow your <strong>audience engagement</strong> and brand awareness</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="h-100">
+                        <img src="https://images.pexels.com/photos/4050291/pexels-photo-4050291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                             alt="Social media marketing" 
+                             class="img-fluid rounded-3 shadow">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="service-icon">
+                                <i class="fas fa-hashtag"></i>
+                            </div>
+                            <h3 class="h2 mb-4">Social Media Solutions</h3>
+                            <ul class="feature-list">
+                                <li><strong>Social Media Strategy</strong> – Custom campaigns across platforms</li>
+                                <li><strong>Organic Growth</strong> – Posting schedules & engagement techniques</li>
+                                <li><strong>Reel & Story Marketing</strong> – Short-form content for engagement</li>
+                                <li><strong>LinkedIn B2B Outreach</strong> – Professional networking strategies</li>
+                                <li><strong>Influencer Marketing</strong> – Brand collaborations & promotions</li>
+                                <li><strong>Community Engagement</strong> – Hashtag optimization & reach</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#contact" class="btn btn-primary btn-lg px-5">Expand Your Social Presence!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paid Advertising -->
+    <section class="py-5 bg-light" id="ppc">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Paid Advertising (PPC & Social Ads)</h2>
+                    <p class="lead">Drive <strong>targeted traffic</strong> and conversions with strategic ad campaigns</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-4">Paid Search & Display</h3>
+                            <ul class="feature-list">
+                                <li>Google Search & Display Ads</li>
+                                <li>Shopping & YouTube Campaigns</li>
+                                <li>Meta Ads (Facebook & Instagram)</li>
+                                <li>LinkedIn B2B Lead Generation</li>
+                                <li>Retargeting & Remarketing</li>
+                                <li>Campaign Testing & Optimization</li>
+                                <li>Budget Planning & Tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-4">Content & Lead Generation</h3>
+                            <ul class="feature-list">
+                                <li>SEO-Optimized Blog Writing</li>
+                                <li>Website & Landing Page Copy</li>
+                                <li>Infographics & Carousels</li>
+                                <li>Short Video Marketing</li>
+                                <li>YouTube Script Writing</li>
+                                <li>Lead Funnel Strategy</li>
+                                <li>CRM Setup & Automation</li>
+                            </ul>
+                            <div class="mt-3">
+                                <a href="#contact" class="btn btn-outline-primary">Generate More Leads!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Why Choose Eaximo for Digital Marketing?</h2>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="h5">Tailored Strategies</h3>
+                        <p>Custom marketing plans aligned with your business goals</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="h5">Data-Driven</h3>
+                        <p>Performance tracking and actionable insights</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="h5">AI-Powered</h3>
+                        <p>Smart automation for efficient campaigns</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="h5">Comprehensive</h3>
+                        <p>Full-spectrum digital presence building</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Ready to Drive Measurable Results?</h2>
+                    <p class="lead mb-5">Let's craft a digital marketing strategy that grows your business</p>
+                    <a href="contact.html" class="btn btn-light btn-lg px-5">Get Started Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h5 text-white mb-4">Eaximo</h3>
+                    <p class="text-light">Your trusted partner for digital marketing, web development, and AI-powered business solutions.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white-50">Services</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white-50">About</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="text-white-50">Testimonials</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">SEO Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Web Development</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Social Media Marketing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">AI Marketing Solutions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Branding & Design</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="h5 text-white mb-4">Newsletter</h3>
+                    <p class="text-white-50 mb-4">Subscribe to get marketing tips and industry insights.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">© 2023 Eaximo. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-white-50 mb-0">Designed with <i class="fas fa-heart text-danger"></i> by Eaximo Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

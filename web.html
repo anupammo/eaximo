@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eaximo provides expert website design, development, and e-commerce solutions. Build a responsive, SEO-friendly website tailored to your brand's needs.">
+    <title>Custom Web Design & Development Services | Eaximo</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reusing existing styles from main page */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --dark: #1f2937;
+            --light: #f9fafb;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .hero-title {
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .service-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.75rem;
+        }
+        
+        .feature-list li:before {
+            content: '•';
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .web-category {
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .web-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefits-section {
+            background-color: var(--light);
+            padding: 5rem 0;
+            border-radius: 12px;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 5rem 0;
+            border-radius: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: auto;
+                padding: 5rem 0;
+            }
+            
+            .hero-title {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Eaximo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-primary active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#why-us">Why Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="#contact">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title display-4 fw-bold mt-5 pt-5">Transform Your Online Presence</h1>
+                    <p class="lead mb-4">A well-designed website is the <strong>foundation of digital success</strong>. We specialize in custom solutions that engage audiences and drive conversions.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-5">
+                        <a href="#services" class="btn btn-primary btn-lg">Explore Services</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-5 my-5" id="services">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Our Web Solutions Services</h2>
+                    <p class="lead">Custom websites designed for <strong>performance, aesthetics, and results</strong></p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3 class="h4">Website Design</h3>
+                            <p>Beautiful, functional designs tailored to your brand identity and business goals.</p>
+                            <a href="#design" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="h4">Website Development</h3>
+                            <p>Robust, scalable websites built with clean code and modern technologies.</p>
+                            <a href="#development" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h3 class="h4">E-Commerce Solutions</h3>
+                            <p>Powerful online stores designed to convert visitors into customers.</p>
+                            <a href="#ecommerce" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Design Services -->
+    <section class="py-5 bg-light" id="design">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Website Design Services</h2>
+                    <p class="lead">Custom designs that <strong>captivate visitors</strong> and reflect your brand identity</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="web-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-palette fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">Custom Website Design</h3>
+                                <p class="mb-0">Tailored aesthetics that match your brand identity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="web-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-mobile-alt fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">Responsive Web Design</h3>
+                                <p class="mb-0">Mobile-optimized layouts for all devices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="web-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-window-maximize fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">Landing Page Design</h3>
+                                <p class="mb-0">High-converting designs for campaigns</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="web-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-sync-alt fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">Website Redesign</h3>
+                                <p class="mb-0">Modernizing outdated designs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="web-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-user-friends fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">UI/UX Design</h3>
+                                <p class="mb-0">Enhancing navigation & engagement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="web-category">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-search fa-2x"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-0">SEO-Focused Design</h3>
+                                <p class="mb-0">Structuring for search visibility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#contact" class="btn btn-primary btn-lg px-5">Create a Website That Drives Growth!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Development Services -->
+    <section class="py-5 my-5" id="development">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Website Development Services</h2>
+                    <p class="lead">Robust, <strong>high-performance</strong> websites built with modern technologies</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="h-100">
+                        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                             alt="Website development" 
+                             class="img-fluid rounded-3 shadow">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="service-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3 class="h2 mb-4">Comprehensive Development Solutions</h3>
+                            <ul class="feature-list">
+                                <li><strong>WordPress Development</strong> – Custom themes & plugins</li>
+                                <li><strong>Custom Website Development</strong> – Scalable solutions</li>
+                                <li><strong>CMS Integration</strong> – Easy content management</li>
+                                <li><strong>Web Applications</strong> – Portals, CRM & admin tools</li>
+                                <li><strong>API Integration</strong> – Third-party connectivity</li>
+                                <li><strong>Website Maintenance</strong> – Updates & security</li>
+                                <li><strong>Performance Optimization</strong> – Speed enhancements</li>
+                                <li><strong>Security Implementation</strong> – Data protection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#contact" class="btn btn-primary btn-lg px-5">Build a High-Performance Website Today!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Types Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Website Types We Develop</h2>
+                    <p class="lead">Custom solutions for <strong>every business need</strong></p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-4">Business & Informational Websites</h3>
+                            <ul class="feature-list">
+                                <li>Corporate Business Websites</li>
+                                <li>Portfolio & Personal Websites</li>
+                                <li>Landing Pages & One-Page Sites</li>
+                                <li>News/Magazine Platforms</li>
+                                <li>Educational/Institutional Sites</li>
+                                <li>Nonprofit/Charity Websites</li>
+                                <li>Forum & Community Platforms</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-4">E-Commerce Websites</h3>
+                            <ul class="feature-list">
+                                <li>WooCommerce/Shopify/Magento</li>
+                                <li>Product Catalog Optimization</li>
+                                <li>Payment Gateway Integration</li>
+                                <li>Shopping Cart Systems</li>
+                                <li>Inventory Management</li>
+                                <li>Shipping & Tax Configuration</li>
+                                <li>Customer Account Features</li>
+                                <li>Sales Analytics & Reporting</li>
+                            </ul>
+                            <div class="mt-3">
+                                <a href="#contact" class="btn btn-outline-primary">Launch Your Online Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Why Choose Eaximo for Web Solutions?</h2>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="h5">SEO-Optimized</h3>
+                        <p>Designed to rank higher in search results from day one</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="h5">Mobile-Friendly</h3>
+                        <p>Perfect experience on all devices and screen sizes</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="h5">Fast & Secure</h3>
+                        <p>Speed-enhanced platforms with robust security</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h3 class="h5">Scalable</h3>
+                        <p>Tailored solutions that grow with your business</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section my-5" id="contact">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Ready to Build a Website That Sets You Apart?</h2>
+                    <p class="lead mb-5">Let's create a high-performance, SEO-optimized website tailored to your business</p>
+                    <a href="contact.html" class="btn btn-light btn-lg px-5">Get Started Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h5 text-white mb-4">Eaximo</h3>
+                    <p class="text-white">Your trusted partner for digital marketing, web development, and AI-powered business solutions.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white-50">Services</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white-50">About</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="text-white-50">Testimonials</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">SEO Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Web Development</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Social Media Marketing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">AI Marketing Solutions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Branding & Design</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="h5 text-white mb-4">Newsletter</h3>
+                    <p class="text-white-50 mb-4">Subscribe to get marketing tips and industry insights.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">© 2023 Eaximo. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-white-50 mb-0">Designed with <i class="fas fa-heart text-danger"></i> by Eaximo Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

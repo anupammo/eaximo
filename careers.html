@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore exciting career opportunities at Eaximo! Join our team of digital marketing professionals, web developers, and branding experts. Apply now for full-time or freelance roles.">
+    <title>Careers at Eaximo | Join Our Digital Marketing & Tech Experts</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reusing existing styles from main page */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --dark: #1f2937;
+            --light: #f9fafb;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        .navbar {
+            transition: all 0.3s ease;
+            padding: 1.5rem 0;
+        }
+        
+        .navbar.scrolled {
+            background-color: white !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 0.75rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.75rem;
+            color: var(--primary);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .hero-title {
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .benefit-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .job-card {
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .job-category {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .job-icon {
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+            color: var(--primary);
+        }
+        
+        .highlight-badge {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .apply-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 5rem 0;
+            border-radius: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: auto;
+                padding: 5rem 0;
+            }
+            
+            .hero-title {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Eaximo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title display-4 fw-bold mt-5 pt-5">Build the Future of Digital Innovation</h1>
+                    <p class="lead mb-4">Join our team of digital marketing professionals, web developers, and branding experts.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-5 pb-5">
+                        <a href="#openings" class="btn btn-primary btn-lg">View Open Positions</a>
+                        <a href="#apply" class="btn btn-outline-light btn-lg">How to Apply</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work at Eaximo Section -->
+    <section class="py-5 my-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Why Work at Eaximo?</h2>
+                    <p class="lead">We foster creativity, expertise, and collaboration to drive digital transformation</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="benefit-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-lightbulb fa-2x"></i>
+                            </div>
+                            <h3 class="h4 mb-0">Innovative Work Culture</h3>
+                        </div>
+                        <p>A space that encourages learning, growth & collaboration with some of the brightest minds in digital marketing and technology.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="benefit-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-chart-line fa-2x"></i>
+                            </div>
+                            <h3 class="h4 mb-0">Professional Development</h3>
+                        </div>
+                        <p>Upskill with hands-on training, workshops & mentorship programs designed to accelerate your career growth.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="benefit-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-laptop-house fa-2x"></i>
+                            </div>
+                            <h3 class="h4 mb-0">Flexible Opportunities</h3>
+                        </div>
+                        <p>Full-time, freelance, and remote roles available to suit your lifestyle and career aspirations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="benefit-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-rocket fa-2x"></i>
+                            </div>
+                            <h3 class="h4 mb-0">Career Growth Pathways</h3>
+                        </div>
+                        <p>Clear progression opportunities in digital marketing, IT, and AI solutions with regular performance reviews.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="benefit-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-globe fa-2x"></i>
+                            </div>
+                            <h3 class="h4 mb-0">Impactful Projects</h3>
+                        </div>
+                        <p>Work with top-tier clients and global brands on projects that make a real difference in the digital landscape.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="benefit-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-users fa-2x"></i>
+                            </div>
+                            <h3 class="h4 mb-0">Collaborative Team</h3>
+                        </div>
+                        <p>Join a diverse team of passionate thinkers, problem-solvers, and innovators reshaping the digital landscape.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Job Openings -->
+    <section class="py-5 bg-light" id="openings">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Current Job Openings</h2>
+                    <p class="lead">Explore exciting opportunities to join our growing team</p>
+                </div>
+            </div>
+            
+            <!-- Digital Marketing & SEO Roles -->
+            <div class="mb-5">
+                <h3 class="job-category">Digital Marketing & SEO Roles</h3>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-search job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">SEO Specialist</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Full-time</span>
+                                            <span class="highlight-badge">Remote</span>
+                                        </div>
+                                        <p>Keyword strategy, technical SEO, link building & analytics. Minimum 3 years experience with proven track record.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-pen-fancy job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">Content Marketing Manager</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Full-time</span>
+                                            <span class="highlight-badge">Hybrid</span>
+                                        </div>
+                                        <p>Blog writing, video scripts & social media copywriting. Must have portfolio of published work.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-ad job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">Google & Meta Ads Expert</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Contract</span>
+                                            <span class="highlight-badge">Remote</span>
+                                        </div>
+                                        <p>PPC campaign management, retargeting & conversion optimization. Certifications preferred.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-hashtag job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">Social Media Manager</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Full-time</span>
+                                        </div>
+                                        <p>Growth strategies, organic engagement & influencer partnerships. Experience with analytics tools required.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Design & Creative Roles -->
+            <div class="mb-5">
+                <h3 class="job-category">Design & Creative Roles</h3>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-palette job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">Graphic Designer</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Full-time</span>
+                                            <span class="highlight-badge">Freelance</span>
+                                        </div>
+                                        <p>Brand identity design, marketing materials, UI/UX graphics. Proficiency in Adobe Creative Suite required.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-video job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">Video Editor & Animator</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Contract</span>
+                                        </div>
+                                        <p>Motion graphics, video marketing, corporate video editing. Portfolio demonstrating creative storytelling required.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-camera job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">Photographer & Videographer</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Part-time</span>
+                                            <span class="highlight-badge">On-site</span>
+                                        </div>
+                                        <p>Event coverage, branding shoots & creative storytelling. Must have own professional equipment.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Web Development & IT Support -->
+            <div class="mb-5">
+                <h3 class="job-category">Web Development & IT Support</h3>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fab fa-wordpress job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">WordPress Developer</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Full-time</span>
+                                            <span class="highlight-badge">Remote</span>
+                                        </div>
+                                        <p>Custom theme development, CMS configuration & plugin integration. Minimum 2 years WordPress experience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-code job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">Software Engineer</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Full-time</span>
+                                        </div>
+                                        <p>Web applications, AI integration, CRM automation & API development. Strong JavaScript/Python skills required.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-headset job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">Technical Support Specialist</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Full-time</span>
+                                            <span class="highlight-badge">Hybrid</span>
+                                        </div>
+                                        <p>Website troubleshooting, hosting support & cybersecurity services. Customer service experience preferred.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI & Automation Roles -->
+            <div class="mb-5">
+                <h3 class="job-category">AI & Automation Roles</h3>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-robot job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">AI Content Creator</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Freelance</span>
+                                            <span class="highlight-badge">Remote</span>
+                                        </div>
+                                        <p>AI-generated blog writing, chatbot scripting & automated copywriting. Experience with GPT models preferred.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-brain job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">AI-Powered Marketing Strategist</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Full-time</span>
+                                        </div>
+                                        <p>Predictive analytics, lead scoring & ad optimization. Experience with AI marketing tools required.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-comments job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">AI Chatbot Developer</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Contract</span>
+                                        </div>
+                                        <p>Conversational AI development & customer support automation. NLP experience preferred.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Internship & Freelance Opportunities -->
+            <div>
+                <h3 class="job-category">Internship & Freelance Opportunities</h3>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-user-graduate job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">Digital Marketing Intern</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Internship</span>
+                                            <span class="highlight-badge">3-6 months</span>
+                                        </div>
+                                        <p>SEO research, content creation & campaign assistance. Perfect for marketing students.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="job-card card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-laptop-code job-icon"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-2">Web Development Intern</h4>
+                                        <div class="mb-3">
+                                            <span class="highlight-badge">Internship</span>
+                                            <span class="highlight-badge">3-6 months</span>
+                                        </div>
+                                        <p>Front-end development & CMS support. Basic HTML/CSS/JS knowledge required.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Apply Section -->
+    <section class="py-5" id="apply">
+        <div class="container">
+            <div class="apply-section">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="display-5 fw-bold mb-4">How to Apply</h2>
+                        <div class="row g-4 text-start">
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="me-3">
+                                        <i class="fas fa-paper-plane fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h5">Send Your Resume</h4>
+                                        <p class="mb-0">careers@eaximo.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="me-3">
+                                        <i class="fas fa-briefcase fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h5">Attach Your Portfolio</h4>
+                                        <p class="mb-0">Share your best work samples</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="me-3">
+                                        <i class="fas fa-star fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h5">Mention Your Expertise</h4>
+                                        <p class="mb-0">Highlight key skills & experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="lead mt-4">Have questions? <a href="mailto:hr@eaximo.com" class="text-white">Reach out to our HR team</a></p>
+                        <a href="mailto:careers@eaximo.com" class="btn btn-light btn-lg mt-3 px-5">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h5 text-white mb-4">Eaximo</h3>
+                    <p>Your trusted partner for digital marketing, web development, and AI-powered business solutions.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="index.html#services" class="text-white-50">Services</a></li>
+                        <li class="mb-2"><a href="index.html#about" class="text-white-50">About</a></li>
+                        <li class="mb-2"><a href="careers.html" class="text-white-50">Careers</a></li>
+                        <li class="mb-2"><a href="index.html#contact" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">SEO Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Web Development</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Social Media Marketing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">AI Marketing Solutions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Branding & Design</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="h5 text-white mb-4">Contact</h3>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Business Ave, Suite 456</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> +1 (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> contact@eaximo.com</li>
+                        <li class="mb-2"><i class="fas fa-briefcase me-2"></i> careers@eaximo.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">© 2023 Eaximo. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-white-50 mb-0">Designed with <i class="fas fa-heart text-danger"></i> by Eaximo Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Eaximo's expert-led training programs in digital marketing, SEO, branding, AI automation, and web development. Get certified and grow your expertise today!">
+    <title>Academics & Training | Eaximo Digital Marketing & AI Courses</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reusing existing styles from main page */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --dark: #1f2937;
+            --light: #f9fafb;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .hero-title {
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .program-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .program-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        .highlight-badge {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .workshop-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 5rem 0;
+            border-radius: 12px;
+        }
+        
+        .enroll-section {
+            background-color: var(--light);
+            padding: 5rem 0;
+            border-radius: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: auto;
+                padding: 5rem 0;
+            }
+            
+            .hero-title {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Eaximo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-primary active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#why-us">Why Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="#contact">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title display-4 fw-bold">Upskill with Eaximo's Expert-Led Training Programs</h1>
+                    <p class="lead mb-4">Master digital marketing, branding, web development, AI automation, and more with our professional training programs.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#programs" class="btn btn-primary btn-lg">Explore Programs</a>
+                        <a href="#enroll" class="btn btn-outline-light btn-lg">How to Enroll</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-5 my-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h2 class="section-title">Transform Your Career with Industry-Leading Training</h2>
+                    <p class="lead mb-5">At <strong>Eaximo</strong>, we believe that <strong>continuous learning fuels success</strong> in the <strong>digital world</strong>. Our programs are designed to help individuals and businesses master essential digital skills through practical, real-world training.</p>
+                    
+                    <div class="row g-4 text-start">
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-user-graduate fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Beginner to Advanced</h4>
+                                    <p>Structured learning paths for all skill levels</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-certificate fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Industry Certifications</h4>
+                                    <p>Recognized credentials for career growth</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-briefcase fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Practical Skills</h4>
+                                    <p>Real-world applications and case studies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Programs Section -->
+    <section class="py-5 bg-light" id="programs">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Our Training Programs</h2>
+                    <p class="lead">Comprehensive courses designed for digital success</p>
+                </div>
+            </div>
+            
+            <!-- Digital Marketing Mastery -->
+            <div class="program-card card">
+                <div class="card-body p-4 p-lg-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="program-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="h2 mb-3">Digital Marketing Mastery</h3>
+                            <div class="mb-4">
+                                <span class="highlight-badge">SEO & Keyword Strategy</span>
+                                <span class="highlight-badge">PPC & Paid Ads</span>
+                                <span class="highlight-badge">Content Marketing</span>
+                                <span class="highlight-badge">Social Media Growth</span>
+                                <span class="highlight-badge">Email Automation</span>
+                                <span class="highlight-badge">Analytics & CRO</span>
+                            </div>
+                            <p>Master the complete digital marketing funnel from awareness to conversion. Learn proven strategies for organic and paid traffic growth, content creation, and performance optimization.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                            <div class="bg-primary text-white p-3 rounded-3 d-inline-block">
+                                <h4 class="h5 mb-0">Certification Included:</h4>
+                                <p class="mb-0 fw-bold">Digital Marketing Fundamentals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Branding & Graphic Design -->
+            <div class="program-card card">
+                <div class="card-body p-4 p-lg-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="program-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3 class="h2 mb-3">Branding & Graphic Design Fundamentals</h3>
+                            <div class="mb-4">
+                                <span class="highlight-badge">Brand Identity</span>
+                                <span class="highlight-badge">Logo Design</span>
+                                <span class="highlight-badge">Social Media Graphics</span>
+                                <span class="highlight-badge">Visual Storytelling</span>
+                                <span class="highlight-badge">Print Design</span>
+                            </div>
+                            <p>Develop compelling visual identities that resonate with your audience. Learn professional design techniques for digital and print media that elevate brand perception.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                            <div class="bg-primary text-white p-3 rounded-3 d-inline-block">
+                                <h4 class="h5 mb-0">Certification Included:</h4>
+                                <p class="mb-0 fw-bold">Branding & Creative Design Expert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Web Development & UX/UI -->
+            <div class="program-card card">
+                <div class="card-body p-4 p-lg-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="program-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="h2 mb-3">Website Development & UX/UI Design</h3>
+                            <div class="mb-4">
+                                <span class="highlight-badge">WordPress</span>
+                                <span class="highlight-badge">E-commerce</span>
+                                <span class="highlight-badge">UI/UX Principles</span>
+                                <span class="highlight-badge">Speed Optimization</span>
+                                <span class="highlight-badge">API Integration</span>
+                            </div>
+                            <p>Build professional websites with optimal user experience. From front-end development to performance optimization, gain the skills to create fast, secure, and responsive websites.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                            <div class="bg-primary text-white p-3 rounded-3 d-inline-block">
+                                <h4 class="h5 mb-0">Certification Included:</h4>
+                                <p class="mb-0 fw-bold">Web Development & UX Design Pro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI-Powered Automation -->
+            <div class="program-card card">
+                <div class="card-body p-4 p-lg-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="program-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3 class="h2 mb-3">AI-Powered Automation & Marketing Tools</h3>
+                            <div class="mb-4">
+                                <span class="highlight-badge">AI Content</span>
+                                <span class="highlight-badge">Predictive Analytics</span>
+                                <span class="highlight-badge">Lead Generation</span>
+                                <span class="highlight-badge">Ad Optimization</span>
+                                <span class="highlight-badge">AI for SEO</span>
+                            </div>
+                            <p>Harness the power of artificial intelligence to automate and optimize marketing processes. Learn to implement AI tools that enhance efficiency and drive better results.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                            <div class="bg-primary text-white p-3 rounded-3 d-inline-block">
+                                <h4 class="h5 mb-0">Certification Included:</h4>
+                                <p class="mb-0 fw-bold">AI-Powered Marketing & Automation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Business Growth Strategies -->
+            <div class="program-card card">
+                <div class="card-body p-4 p-lg-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="program-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="h2 mb-3">Business Growth Strategies & Leadership</h3>
+                            <div class="mb-4">
+                                <span class="highlight-badge">Digital Branding</span>
+                                <span class="highlight-badge">Customer Acquisition</span>
+                                <span class="highlight-badge">Sales Automation</span>
+                                <span class="highlight-badge">Advanced CRO</span>
+                                <span class="highlight-badge">Scaling with AI</span>
+                            </div>
+                            <p>Develop strategic leadership skills to drive business growth in the digital age. Learn advanced techniques for customer acquisition, conversion optimization, and scaling operations.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                            <div class="bg-primary text-white p-3 rounded-3 d-inline-block">
+                                <h4 class="h5 mb-0">Certification Included:</h4>
+                                <p class="mb-0 fw-bold">Digital Growth & Leadership</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Features Section -->
+    <section class="py-5 my-5">
+        <div class="container">
+            <div class="workshop-section">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h2 class="display-5 fw-bold mb-5">Workshop & Live Masterclasses</h2>
+                        <div class="row g-4">
+                            <div class="col-md-3">
+                                <div class="feature-icon mx-auto">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                                <h3 class="h4">Expert-Led Training</h3>
+                                <p>Live Q&A sessions & interactive learning with industry professionals</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="feature-icon mx-auto">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h3 class="h4">Hands-On Projects</h3>
+                                <p>Practical exercises & real-world case studies for applied learning</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="feature-icon mx-auto">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <h3 class="h4">Industry Certification</h3>
+                                <p>Validated credentials to enhance your professional profile</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="feature-icon mx-auto">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <h3 class="h4">Data-Driven Insights</h3>
+                                <p>Analytics & performance tracking techniques for measurable results</p>
+                            </div>
+                        </div>
+                        <div class="mt-5 pt-3">
+                            <p class="lead mb-4">Need a tailored training program? We offer custom courses for businesses & teams!</p>
+                            <a href="#enroll" class="btn btn-light btn-lg px-5">Inquire About Custom Training</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enroll Section -->
+    <section class="enroll-section" id="enroll">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Enroll in Our Programs Today</h2>
+                    <div class="row g-4 text-start mt-5">
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Location</h4>
+                                    <p class="mb-0">Online & In-Person<br>(Based on availability)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-calendar-alt fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Upcoming Batches</h4>
+                                    <p class="mb-0">Next Training Date:<br><strong>October 15, 2023</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-user-graduate fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Level</h4>
+                                    <p class="mb-0">Beginner to Advanced<br>Courses for all skill levels</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="h5 mb-3">How to Register</h4>
+                        <a href="mailto:academy@eaximo.com" class="btn btn-primary btn-lg px-5">
+                            <i class="fas fa-envelope me-2"></i> academy@eaximo.com
+                        </a>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="display-6 fw-bold mb-4">Boost Your Skills & Grow Your Career with Eaximo Today!</h3>
+                        <a href="mailto:academy@eaximo.com" class="btn btn-outline-primary btn-lg px-5">Get Started Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h5 text-white mb-4">Eaximo</h3>
+                    <p>Your trusted partner for digital marketing, web development, and AI-powered business solutions.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white-50">Services</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white-50">About</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="text-white-50">Testimonials</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">SEO Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Web Development</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Social Media Marketing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">AI Marketing Solutions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Branding & Design</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="h5 text-white mb-4">Newsletter</h3>
+                    <p class="text-white-50 mb-4">Subscribe to get marketing tips and industry insights.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">© 2023 Eaximo. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-white-50 mb-0">Designed with <i class="fas fa-heart text-danger"></i> by Eaximo Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
