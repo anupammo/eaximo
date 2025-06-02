@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Eaximo's portfolio of digital marketing, web development, and AI-powered solutions. See how we've helped businesses grow.">
+    <title>Portfolio | Eaximo - Digital Marketing & AI Solutions</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reusing existing styles from main page */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --dark: #1f2937;
+            --light: #f9fafb;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .hero-title {
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .contact-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-icon {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .faq-card {
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .form-section {
+            background-color: var(--light);
+            padding: 5rem 0;
+            border-radius: 12px;
+        }
+        
+        /* Portfolio specific styles */
+        .portfolio-hero {
+            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.9)), 
+                        url('https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .portfolio-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-card:hover .portfolio-img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-category {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .portfolio-tag {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .filter-btn {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            background: white;
+            border-radius: 30px;
+            padding: 8px 20px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .stats-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .client-logo {
+            height: 60px;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        .testimonial-card {
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .client-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-hero {
+                min-height: auto;
+                padding: 5rem 0;
+            }
+            
+            .hero-title {
+                font-size: 2.25rem;
+            }
+            
+            .filter-btn {
+                padding: 6px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Eaximo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="#contact">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero Section -->
+    <section class="portfolio-hero" id="portfolio-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 my-5">
+                    <h1 class="hero-title display-4 fw-bold mt-5">Our Digital Masterpieces</h1>
+                    <p class="lead mb-4">Explore our portfolio of successful projects where creativity meets technology to deliver exceptional results for our clients.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-5">
+                        <a href="#portfolio-grid" class="btn btn-primary btn-lg">View Projects</a>
+                        <a href="#contact-form" class="btn btn-outline-light btn-lg">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Stats Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="stats-number">250+</div>
+                        <div class="stats-title">Projects Completed</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="stats-number">98%</div>
+                        <div class="stats-title">Client Satisfaction</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="stats-number">150+</div>
+                        <div class="stats-title">Happy Clients</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-card">
+                        <div class="stats-number">15</div>
+                        <div class="stats-title">Industry Awards</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter Section -->
+    <section class="py-5" id="portfolio-filter">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Our Featured Work</h2>
+                    <p class="lead">Browse through our successful projects across various industries and services</p>
+                </div>
+            </div>
+            
+            <div class="text-center mb-5">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="seo">SEO & Marketing</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="ai">AI Solutions</button>
+            </div>
+            
+            <div class="row g-4" id="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="seo">
+                    <div class="portfolio-card">
+                        <div class="position-relative">
+                            <img src="https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="portfolio-img" alt="SEO Project">
+                            <span class="portfolio-category">SEO</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h5 mb-2">GlobalTech SEO Transformation</h3>
+                            <p class="text-muted small mb-3">Increased organic traffic by 220% for a SaaS platform through comprehensive SEO strategy.</p>
+                            <div>
+                                <span class="portfolio-tag">Keyword Research</span>
+                                <span class="portfolio-tag">Content Strategy</span>
+                                <span class="portfolio-tag">Technical SEO</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary mt-3">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
+                    <div class="portfolio-card">
+                        <div class="position-relative">
+                            <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="portfolio-img" alt="Web Development Project">
+                            <span class="portfolio-category">Web Development</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h5 mb-2">Luxury Resort Booking Platform</h3>
+                            <p class="text-muted small mb-3">Custom booking system with real-time availability and payment processing.</p>
+                            <div>
+                                <span class="portfolio-tag">React.js</span>
+                                <span class="portfolio-tag">Node.js</span>
+                                <span class="portfolio-tag">Payment Gateway</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary mt-3">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="branding">
+                    <div class="portfolio-card">
+                        <div class="position-relative">
+                            <img src="https://images.pexels.com/photos/7376/startup-photos.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="portfolio-img" alt="Branding Project">
+                            <span class="portfolio-category">Branding</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h5 mb-2">EcoLife Rebranding</h3>
+                            <p class="text-muted small mb-3">Complete brand identity redesign for sustainable products company.</p>
+                            <div>
+                                <span class="portfolio-tag">Logo Design</span>
+                                <span class="portfolio-tag">Brand Guidelines</span>
+                                <span class="portfolio-tag">Packaging</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary mt-3">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="ai">
+                    <div class="portfolio-card">
+                        <div class="position-relative">
+                            <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="portfolio-img" alt="AI Project">
+                            <span class="portfolio-category">AI Solutions</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h5 mb-2">Retail Analytics AI Platform</h3>
+                            <p class="text-muted small mb-3">Predictive analytics solution for retail inventory optimization.</p>
+                            <div>
+                                <span class="portfolio-tag">Machine Learning</span>
+                                <span class="portfolio-tag">Data Visualization</span>
+                                <span class="portfolio-tag">Predictive Analytics</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary mt-3">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="seo">
+                    <div class="portfolio-card">
+                        <div class="position-relative">
+                            <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="portfolio-img" alt="SEO Project">
+                            <span class="portfolio-category">SEO</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h5 mb-2">E-commerce SEO Strategy</h3>
+                            <p class="text-muted small mb-3">Tripled organic revenue for fashion e-commerce store in 6 months.</p>
+                            <div>
+                                <span class="portfolio-tag">E-commerce SEO</span>
+                                <span class="portfolio-tag">Content Marketing</span>
+                                <span class="portfolio-tag">Link Building</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary mt-3">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
+                    <div class="portfolio-card">
+                        <div class="position-relative">
+                            <img src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="portfolio-img" alt="Web Development Project">
+                            <span class="portfolio-category">Web Development</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="h5 mb-2">FinTech Dashboard</h3>
+                            <p class="text-muted small mb-3">Real-time financial dashboard for investment tracking and analytics.</p>
+                            <div>
+                                <span class="portfolio-tag">Vue.js</span>
+                                <span class="portfolio-tag">API Integration</span>
+                                <span class="portfolio-tag">Data Security</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary mt-3">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#contact-form" class="btn btn-primary btn-lg px-5">Start Your Project Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Trusted By Industry Leaders</h2>
+                    <p class="lead">We've partnered with innovative companies across various sectors</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 align-items-center justify-content-center">
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://via.placeholder.com/150x60/2563eb/ffffff?text=TechCorp" alt="Client Logo" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://via.placeholder.com/150x60/1e40af/ffffff?text=GlobalBank" alt="Client Logo" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://via.placeholder.com/150x60/3b82f6/ffffff?text=HealthPlus" alt="Client Logo" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://via.placeholder.com/150x60/2563eb/ffffff?text=EcoLife" alt="Client Logo" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://via.placeholder.com/150x60/1e40af/ffffff?text=FinTechX" alt="Client Logo" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://via.placeholder.com/150x60/3b82f6/ffffff?text=RetailPro" alt="Client Logo" class="img-fluid client-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Client Success Stories</h2>
+                    <p class="lead">What our clients say about working with us</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Client" class="client-img me-3">
+                            <div>
+                                <h4 class="mb-0">Michael Reynolds</h4>
+                                <p class="text-muted mb-0">CEO, TechCorp</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Eaximo's SEO strategy transformed our online visibility. Our organic traffic increased by 220% in just 6 months, and we're now ranking for competitive keywords we never thought possible."</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Client" class="client-img me-3">
+                            <div>
+                                <h4 class="mb-0">Sarah Johnson</h4>
+                                <p class="text-muted mb-0">Marketing Director, EcoLife</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"The rebranding work by Eaximo perfectly captured our company's mission and values. Our customer engagement has increased significantly since the launch of our new brand identity."</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Client" class="client-img me-3">
+                            <div>
+                                <h4 class="mb-0">David Chen</h4>
+                                <p class="text-muted mb-0">CTO, FinTechX</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"The custom dashboard developed by Eaximo has become indispensable to our operations. It's not just visually stunning but incredibly functional, saving us hours of manual work daily."</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Client" class="client-img me-3">
+                            <div>
+                                <h4 class="mb-0">Jennifer Martinez</h4>
+                                <p class="text-muted mb-0">Operations Manager, RetailPro</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"The AI inventory solution from Eaximo has reduced our stockouts by 78% and decreased excess inventory by 45%. The ROI was achieved in just three months of implementation."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-3">Ready to Transform Your Digital Presence?</h2>
+                    <p class="lead mb-0">Let's discuss how we can help you achieve your business goals with our digital expertise.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <a href="#contact-form" class="btn btn-light btn-lg px-5">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h5 text-white mb-4">Eaximo</h3>
+                    <p class="text-light">Your trusted partner for digital marketing, web development, and AI-powered business solutions.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white-50">Services</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="text-white-50">Portfolio</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white-50">About</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 text-white mb-4">Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">SEO Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Web Development</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Social Media Marketing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">AI Marketing Solutions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Branding & Design</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="h5 text-white mb-4">Newsletter</h3>
+                    <p class="text-white-50 mb-4">Subscribe to get marketing tips and industry insights.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">© 2023 Eaximo. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-white-50 mb-0">Designed with <i class="fas fa-heart text-danger"></i> by Eaximo Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Portfolio filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
